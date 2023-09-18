@@ -203,10 +203,19 @@
 }
 
 .car-card {
-  background-color: transparent;
-  border: 0px solid rgb(227, 242, 250); /* White borders */
+  background-color: rgb(77, 185, 243);
+  border: 0px solid rgb(19, 80, 112); /* White borders */
   border-radius: 8px; /* Rounded corners, adjust as needed */
   padding: 16px; /* Add padding as desired */
-  box-shadow: 10px 10px 6px rgba(10, 52, 90, 0.1); /* Optional shadow for depth */
+  box-shadow: 10px 10px 6px rgba(4, 26, 46, 0.1); /* Optional shadow for depth */
   /* Other styles for your card content */
+}
+
+.nav-background {
+  background-image: url("/hero-bg.png"); /* Replace with your image URL */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+  height: 150px; /* Set the desired height for your navigation bar */
 }
