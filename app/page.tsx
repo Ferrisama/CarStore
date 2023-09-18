@@ -7,21 +7,22 @@ export default async function Home({ searchParams }: HomeProps) {
     manufacturer: searchParams.manufacturer || "",
     year: searchParams.year || 2022,
     fuel: searchParams.fuel || "",
-    limit: searchParams.limit || 9,
     model: searchParams.model || "",
   });
+  const limitedCars = allCars.slice(0, searchParams.limit || 9);
 
-  const isDataEmpty = !Array.isArray(allCars) || allCars.length < 1 || !allCars;
+  const isDataEmpty =
+    !Array.isArray(limitedCars) || limitedCars.length < 1 || !limitedCars;
 
   return (
     <main className="overflow-hidden">
       <div
-        className="mt-40 rounded-lg  padding-x padding-y max-width bg-blue-200"
+        className="mt-0 rounded-lg  padding-x padding-y  bg-transparent"
         id="discover"
       >
         <div className="home__text-container">
           <h1 className="text-4xl font-extrabold text-blue-800 ">
-            Choose the Car You like Best
+            Choose the Course that suits you best!
           </h1>
         </div>
         <div className="home__filters ">
@@ -31,7 +32,7 @@ export default async function Home({ searchParams }: HomeProps) {
         {!isDataEmpty ? (
           <section>
             <div className="home__cars-wrapper">
-              {allCars?.map((car) => (
+              {limitedCars?.map((car) => (
                 <CarCard car={car} />
               ))}
             </div>
