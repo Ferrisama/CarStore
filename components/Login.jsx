@@ -19,8 +19,8 @@ const Login = () => {
     <>
       <button
         onClick={handleSignInOut}
-        className="text-primary-blue"
-        style={{ fontSize: "20px", fontWeight: "bold" }}
+        className="text-primary-gold-100"
+        style={{ fontSize: "30px", fontWeight: "bold" }}
       >
         {session ? `Signed in as ${session.user.email}` : "Sign in"}
         {isSigningOut && " (Signing out...)"}
